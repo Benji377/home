@@ -8,7 +8,6 @@ const name = 'Benjamin';
 export const siteTitle = 'Benjis Blog';
 
 export default function Layout({ children, home }) {
-  // TODO: Add Navbar
   return (
     <div className={styles.container}>
       <Head>

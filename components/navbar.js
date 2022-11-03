@@ -1,57 +1,70 @@
-import {useState} from 'react'
-
-function NavLink({to, children}) {
-    return <a href={to} className={`mx-4`}>
-        {children}
-    </a>
-}
-
-function MobileNav({open, setOpen}) {
-    return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-            <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
-                <a className="text-xl font-semibold" href="/">LOGO</a>
-            </div>
-            <div className="flex flex-col ml-4">
-                <a className="text-xl font-medium my-4" href="/about" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    About
-                </a>
-                <a className="text-xl font-normal my-4" href="/contact" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    Contact
-                </a>
-            </div>  
-        </div>
-    )
-}
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Navbar() {
-    const [open, setOpen] = useState(false)
-        return (
-            <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
-                <MobileNav open={open} setOpen={setOpen}/>
-                <div className="w-3/12 flex items-center">
-                    <a className="text-2xl font-semibold" href="/">LOGO</a>
-                </div>
-                <div className="w-9/12 flex justify-end items-center">
-    
-                    <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
-                        setOpen(!open)
-                    }}>
-                        {/* hamburger button */}
-                        <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
-                        <span className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                        <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
-                    </div>
-    
-                    <div className="hidden md:flex">
-                        <NavLink to="/contact">
-                            CONTACT
-                        </NavLink>
-                        <NavLink to="/about">
-                            ABOUT
-                        </NavLink>
+    const [active, setActive] = useState(false);
+
+    const handleClick = () => {
+        setActive(!active);
+    };
+
+    return (
+        <>
+            <nav className='flex items-center flex-wrap bg-green-400 p-3 '>
+                <Link href='/' className='inline-flex items-center p-2 mr-4 '>
+                    <Image
+                        priority
+                        src="/images/logo.svg"
+                        className="fill-current text-white h-8 w-8 mr-2"
+                        height={24}
+                        width={24}
+                        alt=""
+                    />
+                    <span className='text-xl text-white font-bold uppercase tracking-wide'>
+                        Benjamin
+                    </span>
+                </Link>
+                <button
+                    className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+                    onClick={handleClick}
+                >
+                    <svg
+                        className='w-6 h-6'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
+                    >
+                        <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M4 6h16M4 12h16M4 18h16'
+                        />
+                    </svg>
+                </button>
+                {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
+                <div
+                    className={`${active ? '' : 'hidden'
+                        }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
+                >
+                    <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
+                        <Link href='/' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
+                            Projects
+                        </Link>
+                        <Link href='/' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+                            Skills
+                        </Link>
+                        <Link href='/' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+                            About
+                        </Link>
+                        <Link href='/' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+                            Contact
+                        </Link>
                     </div>
                 </div>
             </nav>
-        )
-    }
+        </>
+    );
+};
