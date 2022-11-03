@@ -8,10 +8,9 @@ export default function Projects() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <section className={utilStyles.centeredItems}>
                 <h2 className={utilStyles.headingLg}>My Skillset</h2>
-                <ul className={utilStyles.list}>
-                </ul>
+                <h1>COMING SOON</h1>
             </section>
         </Layout>
     );
