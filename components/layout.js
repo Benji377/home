@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1>
           </>
         ) : (
           <>
@@ -50,7 +50,7 @@ export default function Layout({ children, home }) {
                   alt=""
                 />
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className={[utilStyles.headingLg, styles.nameColor].join(" ")}>
               <Link href="/" legacyBehavior>
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
