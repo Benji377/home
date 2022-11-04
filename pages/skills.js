@@ -10,7 +10,7 @@ export default function Projects() {
             </Head>
             <section className={utilStyles.centeredItems}>
                 <h2 className={utilStyles.headingLg}>My Skillset</h2>
-                <h1>COMING SOON</h1>
+                <h3>COMING SOON</h3>
             </section>
         </Layout>
     );
