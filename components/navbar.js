@@ -2,9 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
+/*
+ * Creates a responsive navbar and returns it inside a <nav> tag
+ * The navbar is the same for mobile and desktop, only the alignemnet changes
+ */
 export default function Navbar() {
+    // Checks if mobile or desktop should be used
     const [active, setActive] = useState(false);
 
+    // Changes the state of the navbar items when clicked, highlighting them
     const handleClick = () => {
         setActive(!active);
     };

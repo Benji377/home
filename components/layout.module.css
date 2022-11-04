@@ -1,3 +1,8 @@
+/*
+ * Some styling for the layout.
+ * The name of the file is very important, as it allows Nextjs to import it faster
+ */
+
 .container {
   padding: 0 1rem;
   margin: 3rem auto 6rem;

@@ -21,7 +21,7 @@ export default function Projects({allTimelineData}) {
             </Head>
             <section className={utilStyles.centeredItems}>
                 <h2 className={utilStyles.headingLg}>About me</h2>
-                <p>I'm a simple guy that likes complex things. Next.JS for example</p>
+                <p>I'm a simple guy that likes complex things. Next.JS as an example</p>
 
 
                 <div className="container max-w-5xl px-4 py-12 mx-auto">

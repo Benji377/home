@@ -4,9 +4,15 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+// Blog author name
 const name = 'Benjamin';
+// Title of the website
 export const siteTitle = 'Benjis Blog';
 
+/*
+ * Defines a layout that each page can use. This means that anything in here will
+ * be shown on all pages. In this case we especially included the head of the website
+ */
 export default function Layout({ children, home, location }) {
   return (
     <div className={styles.container}>
@@ -40,6 +46,10 @@ export default function Layout({ children, home, location }) {
   );
 }
 
+/*
+ * A function that determines which image should be loaded on the top of the page
+ * The decision depends on what page we are on, each page has its own image/logo
+ */
 export function getImage(location) {
   switch (location) {
     case 'home': return <><Image priority src="/images/profile_page.png" height={144} width={144} alt="" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;

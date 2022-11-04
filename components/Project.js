@@ -1,6 +1,9 @@
-import Link from 'next/link';
 import Date from './date';
 
+/*
+ * This rapresents a single project component wih all its attribues.
+ * Attributes are passed on from Markdown syntax.
+ */
 export default function Project({ id, title, content, link, language, status, startdate, enddate }) {
     return (
             <section>
@@ -35,6 +38,7 @@ export default function Project({ id, title, content, link, language, status, st
                                         </div>
                                     </div>
                                 </div>
+                                {/* Note that we are not using the <Link> object here, as the link will go somewhere externally */}
                                 <a href={link} className="mt-3 inline-flex items-center text-indigo-500">
                                     Learn More
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="ml-2 h-4 w-4" viewBox="0 0 24 24">
