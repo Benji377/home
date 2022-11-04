@@ -3,7 +3,6 @@ import Date from './date';
 
 export default function Project({ id, title, content, link, language, status, startdate, enddate }) {
     return (
-        <li key={id}>
             <section>
                 <section className="body-font text-gray-600">
                     <div className="container mx-auto px-5 py-12">
@@ -36,17 +35,16 @@ export default function Project({ id, title, content, link, language, status, st
                                         </div>
                                     </div>
                                 </div>
-                                <Link href={link} className="mt-3 inline-flex items-center text-indigo-500">
+                                <a href={link} className="mt-3 inline-flex items-center text-indigo-500">
                                     Learn More
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="ml-2 h-4 w-4" viewBox="0 0 24 24">
+                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="ml-2 h-4 w-4" viewBox="0 0 24 24">
                                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </section>
             </section>
-        </li>
     );
 }

@@ -15,7 +15,7 @@ export async function getStaticProps() {
 
 export default function Projects({allTimelineData}) {
     return (
-        <Layout >
+        <Layout location="about">
             <Head>
                 <title>{siteTitle}</title>
             </Head>

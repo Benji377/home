@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 
 export default function Projects() {
     return (
-        <Layout >
+        <Layout location="contact">
             <Head>
                 <title>{siteTitle}</title>
             </Head>

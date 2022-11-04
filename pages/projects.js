@@ -15,7 +15,7 @@ export async function getStaticProps() {
 
 export default function Projects({ allProjectsData }) {
     return (
-        <Layout>
+        <Layout location="projects">
             <Head>
                 <title>{siteTitle}</title>
             </Head>
@@ -23,16 +23,18 @@ export default function Projects({ allProjectsData }) {
                 <h2 className={utilStyles.headingLg}>Public Github projects</h2>
                 <ul className={utilStyles.plist}>
                     {allProjectsData.map(({ id, title, content, link, language, status, startdate, enddate }) => (
-                        <Project 
-                        id={id} 
-                        title={title}
-                        content={content}
-                        link={link}
-                        language={language}
-                        status={status}
-                        startdate={startdate} 
-                        enddate={enddate}
-                        />
+                        <li key={id}>
+                            <Project
+                                id={id}
+                                title={title}
+                                content={content}
+                                link={link}
+                                language={language}
+                                status={status}
+                                startdate={startdate}
+                                enddate={enddate}
+                            />
+                        </li>
                     ))}
                 </ul>
             </section>
