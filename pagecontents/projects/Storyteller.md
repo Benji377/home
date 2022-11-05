@@ -7,5 +7,5 @@ startdate: '2019-05-30'
 enddate: '2019-06-21'
 ---
 
-A small app without GUI that is able to recognize files in a folder and read out the content of them
-to you using an intelligent voice system.
+A small app that is able to recognize files in a folder and read out the content of them
+to you using an intelligent voice system. It does have a small GUI
