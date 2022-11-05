@@ -23,7 +23,7 @@ export default function Projects({ allProjectsData }) {
                 <h2 className={utilStyles.headingLg}>Public Github projects</h2>
                 <ul className={utilStyles.plist}>
                     {allProjectsData.map(({ id, title, content, link, language, status, startdate, enddate }) => (
-                        <li key={id}>
+                        <li className={utilStyles.listItem} key={id}>
                             <Project
                                 title={title}
                                 content={content}

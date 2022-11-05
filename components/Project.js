@@ -8,7 +8,7 @@ export default function Project({ title, content, link, language, status, startd
     return (
             <section>
                 <section className="body-font text-gray-600">
-                    <div className="container mx-auto px-5 py-12">
+                    <div className="container mx-auto px-5 py-12 lg:w-4/5">
                     <a href={link} style={{textDecoration:'none', color:'gray'}} target="_blank" rel="noopener noreferrer">
                         <div className="shadowhover mx-auto mb-10 flex flex-col items-center rounded-lg border-b border-gray-200 bg-white p-5 sm:flex-row">
                         

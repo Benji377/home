@@ -52,11 +52,12 @@ export default function Layout({ children, home, location }) {
  */
 export function getImage(location) {
   switch (location) {
-    case 'home': return <><Image priority src="/images/profile_page.jpg" className={utilStyles.borderCircle} height={144} width={144} alt="" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;
-    case 'projects': return <Image priority src="/images/projects_page.png" height={108} width={108} alt="" />;
-    case 'skills': return <Image priority src="/images/skills_page.png" height={108} width={108} alt="" />;
-    case 'about': return <Image priority src="/images/about_page.png" height={108} width={108} alt="" />;
-    case 'contact': return <Image priority src="/images/contact_page.png" height={108} width={108} alt="" />;
-    default: return <><Image priority src="/images/profile_page.png" height={144} width={144} alt="" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;
+    case 'home': return <><Image priority src="/images/profile_page.jpg" className={utilStyles.borderCircle} height={144} width={144} alt="Home" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;
+    case 'projects': return <Image priority src="/images/projects_page.png" height={108} width={108} alt="Projects" />;
+    case 'skills': return <Image priority src="/images/skills_page.png" height={108} width={108} alt="Skills" />;
+    case 'about': return <Image priority src="/images/about_page.png" height={108} width={108} alt="About" />;
+    case 'contact': return <Image priority src="/images/contact_page.png" height={108} width={108} alt="Contact" />;
+    case 'blog': return <Image priority src="/images/articles_page.png" height={108} width={108} alt="Blog" />;
+    default: return <><Image priority src="/images/profile_page.png" height={144} width={144} alt="Default" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;
   }
 }

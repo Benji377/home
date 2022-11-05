@@ -18,7 +18,7 @@ export default function Navbar() {
     return (
         <>
             <nav className='flex items-center flex-wrap bg-green-400 p-3 '>
-                <Link href='/' className='inline-flex items-center p-2 mr-4 '>
+                <Link href='/' className='inline-flex items-center p-2 mr-4 hover:text-white rounded'>
                     <Image
                         priority
                         src="/images/logo.svg"
@@ -56,6 +56,9 @@ export default function Navbar() {
                         }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
                 >
                     <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
+                    <Link href='/blog' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
+                            Blog
+                        </Link>
                         <Link href='/projects' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
                             Projects
                         </Link>

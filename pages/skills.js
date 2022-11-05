@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import Skill from '../components/skill';
 
-export default function Projects() {
+export default function Skills() {
     return (
         <Layout location="skills">
             <Head>
@@ -10,7 +11,11 @@ export default function Projects() {
             </Head>
             <section className={utilStyles.centeredItems}>
                 <h2 className={utilStyles.headingLg}>My Skillset</h2>
-                <h3>COMING SOON</h3>
+                    <Skill
+                        title="Web programming"
+                        short="A bit of all web related"
+                        progress="60"
+                    />
             </section>
         </Layout>
     );
