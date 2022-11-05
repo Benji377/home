@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import Image from 'next/image';
-
 
 export default function Social({ name, link, description }) {
     return (
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <a href={link} className="shadowhover rounded-xl" target="_blank" rel="noopener noreferrer">
             <div className="flex items-start rounded-xl bg-white p-4 shadow-lg">
                 <div className="flex h-12 w-12 items-center justify-center">
                     <Image
