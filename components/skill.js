@@ -1,8 +1,6 @@
-
-
 export default function Skill({ title, short, progress }) {
     return (
-        <div className="container p-2 overflow-hidden border bg-white border-slate-100 rounded-lg lg:w-4/5">
+        <div className="container p-2 overflow-hidden border bg-white border-slate-100 rounded-lg lg:w-4/5" style={{margin: "0 0 1.25rem"}}>
 
             <div className="justify-between sm:flex">
                 <div>
