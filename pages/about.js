@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import TimeStep from '../components/TimeStep';
+import TimeStep from '../components/timeStep';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedTimelineData } from '../lib/timeline';
 

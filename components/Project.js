@@ -4,12 +4,14 @@ import Date from './date';
  * This rapresents a single project component wih all its attribues.
  * Attributes are passed on from Markdown syntax.
  */
-export default function Project({ id, title, content, link, language, status, startdate, enddate }) {
+export default function Project({ title, content, link, language, status, startdate, enddate }) {
     return (
             <section>
                 <section className="body-font text-gray-600">
                     <div className="container mx-auto px-5 py-12">
-                        <div className="mx-auto mb-10 flex flex-col items-center rounded-lg border-b border-gray-200 bg-white p-5 sm:flex-row">
+                    <a href={link} style={{textDecoration:'none', color:'gray'}} target="_blank" rel="noopener noreferrer">
+                        <div className="shadowhover mx-auto mb-10 flex flex-col items-center rounded-lg border-b border-gray-200 bg-white p-5 sm:flex-row">
+                        
                             <div className="inline-flex h-20 w-20 flex-shrink-0 items-center justify-center sm:mr-10 sm:h-32 sm:w-32">
                                 <img src="/images/block.png" />
                             </div>
@@ -38,15 +40,10 @@ export default function Project({ id, title, content, link, language, status, st
                                         </div>
                                     </div>
                                 </div>
-                                {/* Note that we are not using the <Link> object here, as the link will go somewhere externally */}
-                                <a href={link} className="mt-3 inline-flex items-center text-indigo-500">
-                                    Learn More
-                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="ml-2 h-4 w-4" viewBox="0 0 24 24">
-                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
                             </div>
+                            
                         </div>
+                        </a>
                     </div>
                 </section>
             </section>

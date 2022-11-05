@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedProjectsData } from '../lib/projects';
-import Project from '../components/Project';
+import Project from '../components/project';
 
 export async function getStaticProps() {
     const allProjectsData = getSortedProjectsData();
@@ -25,7 +25,6 @@ export default function Projects({ allProjectsData }) {
                     {allProjectsData.map(({ id, title, content, link, language, status, startdate, enddate }) => (
                         <li key={id}>
                             <Project
-                                id={id}
                                 title={title}
                                 content={content}
                                 link={link}
