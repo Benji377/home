@@ -33,6 +33,7 @@ export default function Navbar() {
                 </Link>
                 <button
                     className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+                    title='Hamburger'
                     onClick={handleClick}
                 >
                     <svg
