@@ -22,7 +22,7 @@ export default function Projects({ allProjectsData }) {
             <section className={utilStyles.centeredItems}>
                 <h2 className={utilStyles.headingLg}>Public Github projects</h2>
                 <ul className={utilStyles.plist}>
-                    {allProjectsData.map(({ id, title, content, link, language, status, startdate, enddate }) => (
+                    {allProjectsData.map(({ id, title, content, link, language, status, startdate, enddate, img }) => (
                         <li className={utilStyles.listItem} key={id}>
                             <Project
                                 title={title}
@@ -32,6 +32,7 @@ export default function Projects({ allProjectsData }) {
                                 status={status}
                                 startdate={startdate}
                                 enddate={enddate}
+                                img={img}
                             />
                         </li>
                     ))}

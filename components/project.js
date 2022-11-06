@@ -4,7 +4,7 @@ import Date from './date';
  * This rapresents a single project component wih all its attribues.
  * Attributes are passed on from Markdown syntax.
  */
-export default function Project({ title, content, link, language, status, startdate, enddate }) {
+export default function Project({ title, content, link, language, status, startdate, enddate, img }) {
     return (
             <section>
                 <section className="body-font text-gray-600">
@@ -13,7 +13,7 @@ export default function Project({ title, content, link, language, status, startd
                         <div className="shadowhover mx-auto mb-10 flex flex-col items-center rounded-lg border-b border-gray-200 bg-white p-5 sm:flex-row">
                         
                             <div className="inline-flex h-20 w-20 flex-shrink-0 items-center justify-center sm:mr-10 sm:h-32 sm:w-32">
-                                <img src="/images/block.png" />
+                                {img ? <img src={`/projects/${img}_project.png`} /> : <img src="/projects/default_project.png" />}
                             </div>
                             <div className="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
                                 <h1 className="title-font mb-2 text-2xl font-bold text-black">{title}</h1>

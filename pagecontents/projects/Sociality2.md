@@ -5,6 +5,7 @@ status: 'completed'
 language: 'Python'
 startdate: '2019-10-01'
 enddate: '2020-06-09'
+img: 'python'
 ---
 
 A simple command-based assistant that helps to automate tasks and has some small random games.

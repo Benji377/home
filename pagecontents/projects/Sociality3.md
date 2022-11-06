@@ -5,6 +5,7 @@ status: 'completed'
 language: 'Python'
 startdate: '2020-06-09'
 enddate: '2020-08-29'
+img: 'python'
 ---
 
 The improved virtual assistant that now also works on Discord and automates/controls the server there.
