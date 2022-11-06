@@ -52,7 +52,7 @@ export default function Layout({ children, home, location }) {
  */
 export function getImage(location) {
   switch (location) {
-    case 'home': return <><Image priority src="/images/profile_page.jpg" className={utilStyles.borderCircle} height={144} width={144} alt="Home" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;
+    case 'home': return <><Image priority src="/images/profile_page.png" className={utilStyles.borderCircle} height={144} width={144} alt="Home" /><h1 className={[utilStyles.heading2Xl, styles.nameColor].join(" ")}>{name}</h1></>;
     case 'projects': return <Image priority src="/images/projects_page.png" height={108} width={108} alt="Projects" />;
     case 'skills': return <Image priority src="/images/skills_page.png" height={108} width={108} alt="Skills" />;
     case 'about': return <Image priority src="/images/about_page.png" height={108} width={108} alt="About" />;
