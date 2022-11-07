@@ -1,5 +1,5 @@
 ---
-title: 'More content'
+title: 'The Big Project SocyMusic'
 date: '2022-01-07'
 ---
 
