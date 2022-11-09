@@ -1,20 +1,20 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
+import { getLatestPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Post from '../components/post';
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const latestPostsData = getLatestPostsData();
   return {
     props: {
-      allPostsData,
+      latestPostsData
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ latestPostsData }) {
   return (
     <Layout home location="home">
       <Head>
@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.maxwidth}`}>
         <h2 className={utilStyles.headingLg}>My latest posts</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, title, short, date, rtime }) => (
+          {latestPostsData.map(({ id, title, short, date, rtime }) => (
             <li className={utilStyles.listItem} key={id}>
               <Post 
                 title={title}

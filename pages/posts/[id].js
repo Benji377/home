@@ -29,7 +29,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className={utilStyles.maxwidth}>
+      <article className={[utilStyles.maxwidth, "prose"].join(" ")}>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
