@@ -1,6 +1,6 @@
 ---
-title: 'SocyMusic music player'
-link: 'https://github.com/Benji377/SocyMusic'
+title: 'OpenMusic music player'
+link: 'https://github.com/Benji377/OpenMusic'
 status: 'uncompleted'
 language: 'Android Java'
 startdate: '2022-01-07'
