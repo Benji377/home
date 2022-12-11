@@ -54,13 +54,13 @@ export default function Projects() {
                                 
                         <Social
                             name="Tellonym"
-                            link="https://www.buymeacoffee.com/theonlybenji"
+                            link="https://tellonym.me/only_benji"
                             description="Ask me anything anonymously"
                         />
                                 
                         <Social
                             name="Minecraft"
-                            link="https://www.buymeacoffee.com/theonlybenji"
+                            link="https://www.planetminecraft.com/member/benben377/"
                             description="My PlanetMinecraft content"
                         />
 
