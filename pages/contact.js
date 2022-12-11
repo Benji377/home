@@ -51,6 +51,18 @@ export default function Projects() {
                             link="https://www.reddit.com/user/Benben377"
                             description="Funny memes collection"
                         />
+                                
+                        <Social
+                            name="Tellonym"
+                            link="https://www.buymeacoffee.com/theonlybenji"
+                            description="Ask me anything anonymously"
+                        />
+                                
+                        <Social
+                            name="Minecraft"
+                            link="https://www.buymeacoffee.com/theonlybenji"
+                            description="My PlanetMinecraft content"
+                        />
 
                         <Social
                             name="Github"
