@@ -19,7 +19,7 @@ And here starts my actual learning startegy: I choose a project/idea and started
 The big downside of this strategy is that it requires a lot of effort and your finished project will look like a puzzle where you just picked random pieces from different boxes and glued them together. Since beginners tend to not follow best practices, using this strategy it might get even worse, as you could get used to code like this.
 
 ## Why its good
-It is quite a simple approach and while learning you also get the statisfaction of creating your own small project. You can then abe proud of it as you created it yourself, following no specific tutorial. It might therefore reward you and it pushes you to start with what you have and expand your knowledge.
+It is quite a simple approach and while learning you also get the statisfaction of creating your own small project. You can then be proud of it as you created it yourself, following no specific tutorial. It might therefore reward you and it pushes you to start with what you have and expand your knowledge.
 
 ## Conclusion
 We are all different and we also learn things different. This was my way of doing it and I'm still doing it today. But I know that others prefer following a tutorial and then expand the final result, which is completely fine. Just try and you will most certain find a way to learn for yourself. Coding is not as hard as it looks like and learning it can be quite rewarding and interesting. Furthermore, its a quite useful skill to have in life.
